@@ -1,0 +1,39 @@
+docker compose logs
+documentation-1  | 2025/04/07 13:23:18 Files in path /documentation/
+documentation-1  | 2025/04/07 13:23:18 Server started. Listening on port :3000
+chronograf-1     | time="2025-04-07T13:23:22Z" level=error msg="Unable to create bolt clientUnable to open boltdb; is there a chronograf already running?  open /var/lib/chronograf/chronograf-v1.db: permission denied"
+kapacitor-1      | 2025/04/07 13:23:18 No configuration provided, using default settings
+kapacitor-1      | 
+kapacitor-1      | '##:::'##::::'###::::'########:::::'###:::::'######::'####:'########::'#######::'########::
+kapacitor-1      |  ##::'##::::'## ##::: ##.... ##:::'## ##:::'##... ##:. ##::... ##..::'##.... ##: ##.... ##:
+kapacitor-1      |  ##:'##::::'##:. ##:: ##:::: ##::'##:. ##:: ##:::..::: ##::::: ##:::: ##:::: ##: ##:::: ##:
+kapacitor-1      |  #####::::'##:::. ##: ########::'##:::. ##: ##:::::::: ##::::: ##:::: ##:::: ##: ########::
+kapacitor-1      |  ##. ##::: #########: ##.....::: #########: ##:::::::: ##::::: ##:::: ##:::: ##: ##.. ##:::
+telegraf-1       | 2025-04-07T13:23:20Z E! unable to load default config paths: no config file specified, and could not find one in $TELEGRAF_CONFIG_PATH, /etc/telegraf/.telegraf/telegraf.conf, /etc/telegraf/telegraf.conf, or /etc/telegraf/telegraf.d/*.conf
+kapacitor-1      |  ##:. ##:: ##.... ##: ##:::::::: ##.... ##: ##::: ##:: ##::::: ##:::: ##:::: ##: ##::. ##::
+kapacitor-1      |  ##::. ##: ##:::: ##: ##:::::::: ##:::: ##:. ######::'####:::: ##::::. #######:: ##:::. ##:
+kapacitor-1      | ..::::..::..:::::..::..:::::::::..:::::..:::......:::....:::::..::::::.......:::..:::::..::
+kapacitor-1      | 
+kapacitor-1      | ts=2025-04-07T13:23:18.457Z lvl=info msg="kapacitor starting" service=run version=1.7.6 branch=HEAD commit=3347c7d9aec8e031a3eb05f501461fb106c20529
+kapacitor-1      | ts=2025-04-07T13:23:18.457Z lvl=info msg="go version" service=run version=go1.22.7
+kapacitor-1      | ts=2025-04-07T13:23:18.473Z lvl=info msg="listing Kapacitor hostname" source=srv hostname=000bf8e94ed2
+kapacitor-1      | ts=2025-04-07T13:23:18.474Z lvl=error msg="encountered error" service=run err="create server: data_dir \"/var/lib/kapacitor/.kapacitor\" does not exist, failed to create it: mkdir /var/lib/kapacitor/.kapacitor: permission denied"
+kapacitor-1      | run: create server: data_dir "/var/lib/kapacitor/.kapacitor" does not exist, failed to create it: mkdir /var/lib/kapacitor/.kapacitor: permission denied
+influxdb-1       | 2025-04-07T13:23:18.149330823Z	warn	boltdb not found at configured path, but DOCKER_INFLUXDB_INIT_MODE not specified, skipping setup wrapper	{"system": "docker", "bolt_path": "/var/lib/influxdb2/influxd.bolt"}
+influxdb-1       | 2025-04-07T13:23:18.216562194Z	warn	boltdb not found at configured path, but DOCKER_INFLUXDB_INIT_MODE not specified, skipping setup wrapper	{"system": "docker", "bolt_path": "/var/lib/influxdb2/influxd.bolt"}
+influxdb-1       | ts=2025-04-07T13:23:18.403997Z lvl=info msg="Welcome to InfluxDB" log_id=0vl6ZJ0l000 version=v2.7.11 commit=fbf5d4ab5e build_date=2024-12-02T17:48:15Z log_level=info
+influxdb-1       | ts=2025-04-07T13:23:18.405296Z lvl=warn msg="nats-port argument is deprecated and unused" log_id=0vl6ZJ0l000
+influxdb-1       | ts=2025-04-07T13:23:18.424288Z lvl=info msg="Resources opened" log_id=0vl6ZJ0l000 service=bolt path=/var/lib/influxdb2/influxd.bolt
+influxdb-1       | ts=2025-04-07T13:23:18.424507Z lvl=info msg="Resources opened" log_id=0vl6ZJ0l000 service=sqlite path=/var/lib/influxdb2/influxd.sqlite
+influxdb-1       | ts=2025-04-07T13:23:18.426174Z lvl=info msg="Bringing up metadata migrations" log_id=0vl6ZJ0l000 service="KV migrations" migration_count=20
+influxdb-1       | ts=2025-04-07T13:23:21.635454Z lvl=info msg="Bringing up metadata migrations" log_id=0vl6ZJ0l000 service="SQL migrations" migration_count=8
+influxdb-1       | ts=2025-04-07T13:23:21.719064Z lvl=info msg="Using data dir" log_id=0vl6ZJ0l000 service=storage-engine service=store path=/var/lib/influxdb2/engine/data
+influxdb-1       | ts=2025-04-07T13:23:21.719151Z lvl=info msg="Compaction settings" log_id=0vl6ZJ0l000 service=storage-engine service=store max_concurrent_compactions=3 throughput_bytes_per_second=50331648 throughput_bytes_per_second_burst=50331648
+influxdb-1       | ts=2025-04-07T13:23:21.719162Z lvl=info msg="Open store (start)" log_id=0vl6ZJ0l000 service=storage-engine service=store op_name=tsdb_open op_event=start
+influxdb-1       | ts=2025-04-07T13:23:21.719218Z lvl=info msg="Open store (end)" log_id=0vl6ZJ0l000 service=storage-engine service=store op_name=tsdb_open op_event=end op_elapsed=0.057ms
+influxdb-1       | ts=2025-04-07T13:23:21.719245Z lvl=info msg="Starting retention policy enforcement service" log_id=0vl6ZJ0l000 service=retention check_interval=30m
+influxdb-1       | ts=2025-04-07T13:23:21.719252Z lvl=info msg="Starting precreation service" log_id=0vl6ZJ0l000 service=shard-precreation check_interval=10m advance_period=30m
+influxdb-1       | ts=2025-04-07T13:23:21.719908Z lvl=info msg="Starting query controller" log_id=0vl6ZJ0l000 service=storage-reads concurrency_quota=1024 initial_memory_bytes_quota_per_query=9223372036854775807 memory_bytes_quota_per_query=9223372036854775807 max_memory_bytes=0 queue_size=1024
+influxdb-1       | ts=2025-04-07T13:23:21.722217Z lvl=info msg="Configuring InfluxQL statement executor (zeros indicate unlimited)." log_id=0vl6ZJ0l000 max_select_point=0 max_select_series=0 max_select_buckets=0
+influxdb-1       | ts=2025-04-07T13:23:21.733220Z lvl=info msg=Starting log_id=0vl6ZJ0l000 service=telemetry interval=8h
+influxdb-1       | ts=2025-04-07T13:23:21.733270Z lvl=info msg=Listening log_id=0vl6ZJ0l000 service=tcp-listener transport=http addr=:8086 port=8086
